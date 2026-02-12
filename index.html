@@ -87,25 +87,77 @@ button{
     background:#00ffff;
     font-weight:bold;
     cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    background:#00ffaa;
 }
 
 footer{
     margin-top:80px;
     padding:20px;
-    opacity:0.7;
+    opacity:0.8;
+}
+
+/* Hire Me Section */
+.hire-btn{
+    background:#ff6f61;
+    color:white;
+    padding:12px 25px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-top:15px;
+    display:inline-block;
+    text-decoration:none;
+    transition:0.3s;
+}
+.hire-btn:hover{
+    background:#ff3b2e;
+}
+
+/* Contact Form */
+#contactForm{
+    display:none;
+    margin-top:20px;
+    background:rgba(0,0,0,0.7);
+    padding:20px;
+    border-radius:15px;
+    max-width:400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#contactForm input,#contactForm textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:none;
+    border-radius:8px;
+}
+#contactForm button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#00ffff;
+    font-weight:bold;
+    cursor:pointer;
+}
+#contactForm button:hover{
+    background:#00ffaa;
 }
 
 /* Chatbot */
 .chat-btn {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 80px;
     background: #00ffff;
     border: none;
     padding: 15px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
+    z-index: 1000;
 }
 
 .chat-box {
@@ -118,6 +170,7 @@ footer{
     display: none;
     flex-direction: column;
     overflow: hidden;
+    z-index:1000;
 }
 
 .chat-messages {
@@ -143,9 +196,34 @@ footer{
     background: #00ffff;
 }
 
+/* WhatsApp Button */
+.whatsapp-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background:#25D366;
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    color:white;
+    text-decoration:none;
+    z-index:1000;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+.whatsapp-btn:hover{
+    transform:scale(1.1);
+}
+
+/* Responsive */
 @media(max-width:600px){
     h1{font-size:30px;}
     .card{width:90%;}
+    #contactForm{width:90%;}
 }
 </style>
 </head>
@@ -168,6 +246,18 @@ footer{
                 I love building smart apps and futuristic tech projects.
                 My goal is to become a powerful AI developer and create next-level innovations.
             </p>
+            <a href="javascript:void(0)" class="hire-btn" onclick="toggleContact()">💼 Hire Me</a>
+        </div>
+
+        <!-- Contact Form -->
+        <div id="contactForm">
+            <form action="mailto:ssyedsahil720@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p style="margin-top:10px;">Or <a href="https://www.paypal.com/paypalme/YourPayPalID" target="_blank" style="color:#00ffff;">Pay via PayPal</a></p>
         </div>
     </div>
 
@@ -183,6 +273,8 @@ footer{
     </footer>
 </div>
 
+<!-- Floating Buttons -->
+<a href="https://wa.me/917204458256" class="whatsapp-btn" target="_blank">📱</a>
 <button class="chat-btn" onclick="toggleChat()">💬</button>
 
 <div class="chat-box" id="chatBox">
@@ -224,6 +316,12 @@ function sendMessage(){
     chat.innerHTML+="<div>Bot: "+reply+"</div>";
     input.value="";
     chat.scrollTop=chat.scrollHeight;
+}
+
+// Contact Form Toggle
+function toggleContact(){
+    const form=document.getElementById("contactForm");
+    form.style.display=form.style.display==="block"?"none":"block";
 }
 
 // Particles
