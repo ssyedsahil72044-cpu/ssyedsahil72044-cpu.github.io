@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials - Sahil Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body { color:#fff; font-family:'Poppins',sans-serif; margin:0; overflow-x:hidden; background:linear-gradient(-45deg,#1e3c72,#2a5298,#1e3c72,#2a5298); background-size:400% 400%; animation:gradientBG 20s ease infinite;}
+@keyframes gradientBG {0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+nav {width:100%; position:fixed; top:0; left:0; background:rgba(0,0,0,0.5); display:flex; justify-content:center; padding:15px 0; z-index:999;}
+nav a {color:#fff; text-decoration:none; margin:0 20px; font-weight:600; transition:0.3s;}
+nav a:hover {color:#fdbb2d; transform:scale(1.1);}
+section {padding:140px 20px 100px 20px;}
+h2 {text-align:center; font-size:3rem; margin-bottom:50px; text-shadow:1px 1px 5px #000;}
+.testimonial {max-width:700px; margin:20px auto; background:rgba(0,0,0,0.5); padding:20px; border-radius:15px; text-align:center; font-style:italic; display:none;}
+.testimonial.active {display:block;}
+.view-all-btn {display:block; margin:30px auto; padding:15px 30px; background:#fdbb2d; color:#000; border:none; border-radius:50px; font-weight:bold; cursor:pointer; transition:0.3s;}
+.view-all-btn:hover {background:#fff;}
+@media(max-width:768px){nav a{margin:0 10px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="blog.html">Blog</a>
+</nav>
+
+<section class="testimonials">
+  <h2>Testimonials</h2>
+  <div id="testimonial-container">
+    <!-- Top 5 visible initially -->
+    <div class="testimonial active">"Sahil is an outstanding developer! His AI projects are top-notch." - Mentor</div>
+    <div class="testimonial active">"Highly recommend Sahil for any Python or app development projects." - Teacher</div>
+    <div class="testimonial active">"Creative solutions and clean coding style." - Colleague</div>
+    <div class="testimonial active">"Fast learner, dedicated, and professional." - Client</div>
+    <div class="testimonial active">"Great understanding of AI and app development." - Mentor</div>
+    
+    <!-- Additional testimonials (hidden) -->
+    <div class="testimonial">"Sahil delivered the project ahead of schedule." - Client 2</div>
+    <div class="testimonial">"Very innovative approach to problem-solving." - Teacher 2</div>
+    <div class="testimonial">"Always helpful and proactive in development." - Colleague 2</div>
+    <!-- Add more as needed up to 50-100 -->
+  </div>
+  <button class="view-all-btn" onclick="showAll()">View All Testimonials</button>
+</section>
+
+<script>
+function showAll(){
+  const all = document.querySelectorAll('.testimonial');
+  all.forEach(t => t.classList.add('active'));
+  document.querySelector('.view-all-btn').style.display = 'none';
+}
+</script>
+
+</body>
+</html>

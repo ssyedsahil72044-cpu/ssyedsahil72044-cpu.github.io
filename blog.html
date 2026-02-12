@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Sahil Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body { color:#fff; font-family:'Poppins',sans-serif; margin:0; overflow-x:hidden; background:linear-gradient(-45deg,#1e3c72,#2a5298,#1e3c72,#2a5298); background-size:400% 400%; animation:gradientBG 20s ease infinite;}
+@keyframes gradientBG {0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+nav {width:100%; position:fixed; top:0; left:0; background:rgba(0,0,0,0.5); display:flex; justify-content:center; padding:15px 0; z-index:999;}
+nav a {color:#fff; text-decoration:none; margin:0 20px; font-weight:600; transition:0.3s;}
+nav a:hover {color:#fdbb2d; transform:scale(1.1);}
+section {padding:140px 20px 100px 20px;}
+h2 {text-align:center; font-size:3rem; margin-bottom:50px; text-shadow:1px 1px 5px #000;}
+.blog-post {background:rgba(0,0,0,0.5); padding:20px; margin:20px auto; border-radius:15px; max-width:800px;}
+.blog-post h3 {margin-bottom:15px;}
+.blog-post p {font-size:1rem; line-height:1.6;}
+@media(max-width:768px){nav a{margin:0 10px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="blog.html">Blog</a>
+</nav>
+
+<section class="blog">
+  <h2>Blog / Learning</h2>
+  <div class="blog-post">
+    <h3>How I Built an AI Chatbot</h3>
+    <p>
+      In this post, I share the process of creating an AI Chatbot using Python and NLP. The project involved designing conversation flows, training the bot with real data, and deploying it using Flask. Key challenges included understanding natural language processing and optimizing response time.
+    </p>
+  </div>
+  <div class="blog-post">
+    <h3>Top Python Tips for Beginners</h3>
+    <p>
+      Python is versatile and beginner-friendly. In this post, I cover essential tips like writing clean code, using libraries effectively, debugging, and best practices. These tips will help beginners avoid common mistakes and improve coding efficiency.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

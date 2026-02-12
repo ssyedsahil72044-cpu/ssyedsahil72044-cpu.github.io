@@ -1,135 +1,32 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sahil Portfolio</title>
+<title>Sahil Portfolio - Home</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* ---------- GLOBAL ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-body {
-  color: #fff;
-  height: 100%;
-  overflow-x: hidden;
-  background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
-  background-size: 400% 400%;
-  animation: gradientBG 20s ease infinite;
-}
-@keyframes gradientBG {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-
-/* ---------- NAVBAR ---------- */
-nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  padding: 15px 0;
-  z-index: 999;
-}
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-nav a:hover {
-  color: #fdbb2d;
-  transform: scale(1.1);
-}
-
-/* ---------- HERO ---------- */
-.hero {
-  height: 90vh; /* thoda chhota karke niche shift kiya */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 120px 20px 0 20px; /* upar se padding 120px */
-}
-
-.hero h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 20px #000;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-}
-
-.hero a {
-  padding: 15px 40px;
-  background: #fdbb2d;
-  color: #000;
-  font-weight: bold;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.hero a:hover {
-  background: #fff;
-  color: #000;
-  transform: scale(1.05);
-}
-
-/* ---------- ABOUT ---------- */
-section {
-  padding: 100px 20px;
-}
-
-.about {
-  padding: 120px 20px 100px 20px; /* thoda upar se extra space */
-}
-
-section h2 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 50px;
-  text-shadow: 1px 1px 5px #000;
-}
-
-.about p {
-  max-width: 900px;
-  margin: 0 auto;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  text-align: center;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media(max-width:768px){
-  .hero h1 {
-    font-size: 3rem;
-  }
-  .hero p {
-    font-size: 1.2rem;
-  }
-  nav a {
-    margin: 0 10px;
-  }
-}
+body { color:#fff; font-family:'Poppins',sans-serif; margin:0; overflow-x:hidden; background:linear-gradient(-45deg,#1e3c72,#2a5298,#1e3c72,#2a5298); background-size:400% 400%; animation:gradientBG 20s ease infinite;}
+@keyframes gradientBG {0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+nav {width:100%; position:fixed; top:0; left:0; background:rgba(0,0,0,0.5); display:flex; justify-content:center; padding:15px 0; z-index:999;}
+nav a {color:#fff; text-decoration:none; margin:0 20px; font-weight:600; transition:0.3s;}
+nav a:hover {color:#fdbb2d; transform:scale(1.1);}
+.hero {height:90vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:120px 20px 0 20px;}
+.hero h1 {font-size:4rem; margin-bottom:20px; text-shadow:2px 2px 20px #000;}
+.hero p {font-size:1.5rem; margin-bottom:40px;}
+.hero a {padding:15px 40px; background:#fdbb2d; color:#000; font-weight:bold; border-radius:50px; text-decoration:none; transition:0.3s;}
+.hero a:hover {background:#fff; color:#000; transform:scale(1.05);}
+section {padding:100px 20px;}
+.about {padding:120px 20px 100px 20px;}
+section h2 {text-align:center; font-size:3rem; margin-bottom:50px; text-shadow:1px 1px 5px #000;}
+.about p {max-width:900px; margin:0 auto; font-size:1.2rem; line-height:1.8; text-align:center;}
+@media(max-width:768px){.hero h1{font-size:3rem}.hero p{font-size:1.2rem}nav a{margin:0 10px}}
 </style>
 </head>
 <body>
 
-<!-- NAVIGATION -->
 <nav>
   <a href="index.html">Home</a>
   <a href="projects.html">Projects</a>
@@ -138,14 +35,12 @@ section h2 {
   <a href="blog.html">Blog</a>
 </nav>
 
-<!-- HERO SECTION -->
 <section class="hero">
   <h1>Hi, I'm Sahil</h1>
   <p>Python Developer | AI Enthusiast | App Creator</p>
   <a href="projects.html">View My Work</a>
 </section>
 
-<!-- ABOUT ME SECTION -->
 <section class="about" id="about">
   <h2>About Me</h2>
   <p>
@@ -155,4 +50,3 @@ section h2 {
 
 </body>
 </html>
-
